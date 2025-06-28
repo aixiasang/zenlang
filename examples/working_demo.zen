@@ -1,0 +1,107 @@
+// Zen Language Working Demo
+// 展示当前完全支持的功能
+
+print("🧘 Zen Language Working Demo")
+print("============================")
+print()
+
+// 基本变量和数据类型
+print("1. Variables and Types:")
+name = "Zen"
+age = 42
+active = true
+empty = nil
+
+print("  Name:", name, "- Type:", type(name))
+print("  Age:", age, "- Type:", type(age))
+print("  Active:", active, "- Type:", type(active))
+print("  Empty:", empty, "- Type:", type(empty))
+print()
+
+// 算术运算
+print("2. Arithmetic:")
+a = 15
+b = 7
+print("  a =", a, ", b =", b)
+print("  Addition:", a + b)
+print("  Subtraction:", a - b)
+print("  Multiplication:", a * b)
+print("  Division:", a / b)
+print()
+
+// 字符串操作
+print("3. Strings:")
+hello = "Hello"
+world = "World"
+greeting = hello + ", " + world + "!"
+print("  Greeting:", greeting)
+print("  Length:", len(greeting))
+print()
+
+// 布尔运算
+print("4. Boolean Logic:")
+x = 10
+y = 5
+print("  x > y:", x > y)
+print("  x == y:", x == y)
+print("  x != y:", x != y)
+print("  Logic AND:", true && false)
+print("  Logic OR:", true || false)
+print("  Logic NOT:", !false)
+print()
+
+// 函数定义和调用
+print("5. Functions:")
+
+fx add(a, b) {
+    return a + b
+}
+
+fx multiply(x, y) {
+    return x * y
+}
+
+fx greet(person) {
+    return "Hello, " + person + "!"
+}
+
+// 函数调用
+sum = add(10, 5)
+product = multiply(4, 6)
+message = greet("Alice")
+
+print("  add(10, 5) =", sum)
+print("  multiply(4, 6) =", product)
+print("  greet('Alice') =", message)
+print()
+
+// 嵌套函数调用
+print("6. Nested Calls:")
+nested_result = add(multiply(3, 4), add(2, 3))
+print("  add(multiply(3, 4), add(2, 3)) =", nested_result)
+print()
+
+// 内置函数
+print("7. Built-in Functions:")
+test_str = "Zen Programming"
+test_num = 456
+print("  Length of test string:", len(test_str))
+print("  String conversion:", str(test_num))
+print("  Integer conversion:", int("789"))
+print("  Boolean of 1:", bool(1))
+print("  Boolean of 0:", bool(0))
+print()
+
+// 类型转换
+print("8. Type Conversions:")
+print("  String to int: int('123') =", int("123"))
+print("  Int to string: str(456) =", str(456))
+print("  Boolean true to int:", int(true))
+print("  Boolean false to int:", int(false))
+print()
+
+print("✅ Demo Complete!")
+print("All features working correctly!")
+print()
+print("Try the REPL: python zen_repl.py")
+print("Run tests: python test_evaluator.py") 

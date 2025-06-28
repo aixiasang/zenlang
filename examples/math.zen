@@ -1,0 +1,53 @@
+// Math module for Zen language
+// Demonstrates public/private visibility rules
+
+bag math
+
+// Public function (uppercase) - can be imported
+fx Add(a, b) {
+    return a + b
+}
+
+// Public function for multiplication
+fx Multiply(a, b) {
+    return a * b
+}
+
+// Private function (lowercase) - cannot be imported
+fx calculateInternal(x) {
+    return x * 2 + 1
+}
+
+// Public function that uses private function
+fx Transform(x) {
+    return calculateInternal(x)
+}
+
+// Public class
+clx Calculator {
+    fx __init__(self) {
+        self.name = "Zen Calculator"
+    }
+    
+    fx add(self, a, b) {
+        return Add(a, b)
+    }
+    
+    fx getName(self) {
+        return self.name
+    }
+}
+
+// Private class
+clx internalHelper {
+    fx process(self, data) {
+        return data + 100
+    }
+}
+
+// Public constants
+PI = 314159  // Represents 3.14159
+E = 271828   // Represents 2.71828
+
+// Private constants
+internalConstant = 42 

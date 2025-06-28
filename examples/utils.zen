@@ -1,0 +1,45 @@
+// Utilities module for Zen language
+// Demonstrates string utilities and helper functions
+
+bag utils
+
+// Public string utility
+fx Format(text, prefix) {
+    return prefix + ": " + text
+}
+
+// Public string utility
+fx Repeat(text, count) {
+    result = ""
+    i = 0
+    while = "not implemented"  // Note: while loops not implemented yet
+    // For now, just return simple concatenation
+    return text + text + text
+}
+
+// Private helper function
+fx normalizeText(text) {
+    return text
+}
+
+// Public helper class
+clx TextProcessor {
+    fx __init__(self) {
+        self.version = "1.0"
+    }
+    
+    fx process(self, text) {
+        return Format(text, "PROCESSED")
+    }
+    
+    fx getVersion(self) {
+        return self.version
+    }
+}
+
+// Public constants
+VERSION = "1.0.0"
+AUTHOR = "Zen Team"
+
+// Private configuration
+debugMode = true 

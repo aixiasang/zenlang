@@ -1,0 +1,70 @@
+// Simple Zen Program Demo
+// This demonstrates the current capabilities of the Zen interpreter
+
+// Variables and arithmetic
+a = 10
+b = 20
+sum = a + b
+print("Sum:", sum)
+
+// Strings
+greeting = "Hello, " + "Zen!"
+print(greeting)
+print("Length of greeting:", len(greeting))
+
+// Functions
+fx factorial(n) {
+    if n <= 1 {
+        return 1
+    } else {
+        return n * factorial(n - 1)
+    }
+}
+
+// For now, let's use a simpler version without conditionals
+fx double(x) {
+    return x * 2
+}
+
+fx add(x, y) {
+    return x + y
+}
+
+// Test functions
+result1 = double(21)
+print("Double of 21:", result1)
+
+result2 = add(15, 27)
+print("15 + 27 =", result2)
+
+// Boolean operations
+bool_result = 5 > 3
+print("5 > 3:", bool_result)
+
+negated = !bool_result
+print("Not (5 > 3):", negated)
+
+// Type checking
+print("Type of 42:", type(42))
+print("Type of 'hello':", type("hello"))
+print("Type of true:", type(true))
+
+// String to number conversion
+number_str = "123"
+number = int(number_str)
+print("Converted number:", number)
+
+// Classes (if working)
+clx Person {
+    fx __init__(self, name) {
+        self.name = name
+    }
+    
+    fx greet(self) {
+        return "Hello, I am " + self.name
+    }
+}
+
+person = Person("Alice")
+message = person.greet()
+print(message) 

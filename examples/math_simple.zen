@@ -1,0 +1,31 @@
+// Simple Math module for Zen language
+// Demonstrates public/private visibility rules
+
+bag math
+
+// Public function (uppercase) - can be imported
+fx Add(a, b) {
+    return a + b
+}
+
+// Public function for multiplication
+fx Multiply(a, b) {
+    return a * b
+}
+
+// Private function (lowercase) - cannot be imported
+fx calculateInternal(x) {
+    return x * 2 + 1
+}
+
+// Public function that uses private function
+fx Transform(x) {
+    return calculateInternal(x)
+}
+
+// Public constants
+PI = 314159
+E = 271828
+
+// Private constants
+internalConstant = 42 

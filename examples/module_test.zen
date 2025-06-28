@@ -1,0 +1,32 @@
+// Module system test for Zen language
+// Tests import functionality and visibility rules
+
+bag main
+
+// Load modules
+load("math_simple")
+
+fx main() {
+    print("=== Zen Module System Test ===")
+    
+    // Test math module functions
+    result1 = math_simple.Add(5, 3)
+    print("math_simple.Add(5, 3) =", result1)
+    
+    result2 = math_simple.Multiply(4, 7)
+    print("math_simple.Multiply(4, 7) =", result2)
+    
+    // Test public function that uses private function
+    result3 = math_simple.Transform(10)
+    print("math_simple.Transform(10) =", result3)
+    
+    // Test math constants
+    print("math_simple.PI =", math_simple.PI)
+    print("math_simple.E =", math_simple.E)
+    
+    print("\n=== Test Complete ===")
+    
+    // Note: Trying to access private members would cause errors:
+    // math_simple.calculateInternal(5)  // ERROR: not accessible
+    // math_simple.internalConstant      // ERROR: not accessible
+} 
